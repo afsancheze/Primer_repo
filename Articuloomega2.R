@@ -1,3 +1,4 @@
+#Librerías Necesarias
 library(readxl)
 library(psych)
 library(Scale)
@@ -15,12 +16,13 @@ install.views("Psychometrics")
 
 ?sample
 
-
+#Mustra de ítems
 It1<-sample(1:4,30,replace=T)
 It2<-sample(1:4,30,replace=T)
 It3<-sample(1:4,30,replace=T)
 It4<-sample(1:4,30,replace=T)
 
+#Crear Data Frame
 Datos<-cbind.data.frame(It1,It2,It3,It4)
 
 describe(Datos)
@@ -87,9 +89,12 @@ round(cor(r9),2)
 
 
 
+
 q<-sim.item(nvar = 4, nsub = 50, circum = FALSE, xbias = 0, ybias = 0, categorical = TRUE, low = 1, high = 4, 
          truncate = FALSE, cutpoint = 100)
 q<-as.data.frame(q)
+
+
 
 
 
